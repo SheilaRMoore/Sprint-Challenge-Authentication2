@@ -32,7 +32,7 @@ describe("auth-router.js", () => {
     test("user should be created with 201", async () => {
       await request(server)
         .post("/api/auth/register")
-        .send({ username: "user11", password: "password" })
+        .send({ username: "user1", password: "password" })
         .then(res => {
           expect(res.status).toBe(201);
         })

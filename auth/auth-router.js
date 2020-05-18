@@ -1,4 +1,11 @@
+  
 const router = require('express').Router();
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const secrets = require('../api/secrets.js');
+const gt = require('../auth/generateToken.js')
+
+const Users = require('../users/user-model.js');
 
 router.post("/register", async (req, res, next) => {
   try {
@@ -29,5 +36,4 @@ router.post("/login", async (req, res, next) => {
 })
 
 module.exports = router;
-
 
